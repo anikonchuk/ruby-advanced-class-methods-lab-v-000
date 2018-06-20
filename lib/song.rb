@@ -42,7 +42,7 @@ class Song
   end
   
   def song.alphabetical
-    self.all.sorty_by {|song| song.name}
+    self.all.sort_by {|song| song.name}
   end
   
   
