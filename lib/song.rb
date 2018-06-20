@@ -41,6 +41,9 @@ class Song
     end
   end
   
+  def song.alphabetical
+    self.all.sorty_by 
+  end
   
   
   def self.destroy_all
