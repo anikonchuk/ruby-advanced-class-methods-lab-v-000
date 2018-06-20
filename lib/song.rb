@@ -52,7 +52,17 @@ class Song
     split_title = split_song[1].split(".")
     song.name = split_title[0]
     return song
-  end 
+  end
+  
+  def self.create_from_filename(filename)
+    song = self.new 
+    split_song = filename.split(" - ")
+    song.artist_name = split_song[0]
+    split_title = split_song[1].split(".")
+    song.name = split_title[0]
+    song.save
+    return song
+  end
   
   def self.destroy_all
     self.all.clear
